@@ -1,0 +1,62 @@
+body {
+  color: #444444; }
+
+sidebar {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  background-color: grey;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  float: left;
+  z-index: 10; }
+
+@keyframes darkenBg {
+  0% {
+    background-color: white; }
+  100% {
+    background-color: #fafafa; } }
+#card-container {
+  float: right;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%; }
+  #card-container a {
+    color: #444444;
+    text-decoration: none; }
+
+.card {
+  position: relative;
+  margin: auto;
+  width: 600px;
+  height: 300px;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .card:hover {
+    animation: darkenBg 2s linear; }
+
+.img {
+  float: left;
+  position: relative; }
+
+img {
+  width: 300px;
+  height: auto; }
+
+.info {
+  position: relative;
+  text-align: center;
+  top: 38%; }
+
+.name {
+  font-size: 18px;
+  text-align: center; }
+
+.inOut {
+  font-size: 16px;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
