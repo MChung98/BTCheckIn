@@ -1,10 +1,23 @@
-import bluetooth
+# import bluetooth
 import time
 import os.path
-
+import MySQLdb
 print "In/Out Board"
 
 home = False
+
+db = MySQLdb.connect("localhost","monitor","MichaelChung1!", "users")
+cursor = db.cursor()
+query = "SELECT * FROM usersdat"
+
+cursor.execute(query)
+
+results = cursor.fetchall()
+
+
+print 'leo'
+for row in results:
+    print row
 
 while True:
     if((os.path.isfile(users.txt)) == False):
@@ -18,12 +31,12 @@ while True:
                 print "Kevin: in"
                 if(home == False):
                     home = True
-                    # send notification to server
+                    # send notification to server that aI'm in
                 else:
                     print "Kevin: out"
                 if(home):
                     home = False
-                    # send notification to server
+                    # send notification to server that I'm out
 
         except:
             print("Errrroooooooeeer")
