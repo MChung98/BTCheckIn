@@ -4,62 +4,62 @@ $color: #444444
 
 body
   color: $color
+  text-decoration: none
+
 
 sidebar
-  position: fixed
-  height: 100%
-  width: $sidebar-width
   background-color: grey
+  width: $sidebar-width
+  height: 100%
+  position: absolute
   top: 0
   left: 0
   box-shadow: $shadow
-  float: left
-  z-index: 10
-
-@keyframes darkenBg
-  0% 
-    background-color: white
-  100%
-    background-color: darken(white, 2%)
+  z-index: 3
+  li
+    list-style-type: none
+    a
+      text-decoration: none
+      color: white
+      font-size: 20px
 
 #card-container
   float: right
-  width: 100%
-  margin: 0 auto
-  position: relative
+  width: -webkit-calc(100% - 250px)
   height: 100%
+  position: absolute
+  top: 40px
+  left: $sidebar-width
   a
-    color: $color
     text-decoration: none
+    
+#center-cards
+  width: 1250px
+  margin: 0 auto
 
 .card
   position: relative
-  margin: auto
+  display: inline-block
   width: 600px
   height: 300px
   text-align: center
+  margin: 0 auto
   margin-bottom: 10px
+  margin-left: 20px
   box-shadow: $shadow
-  &:hover
-    animation: darkenBg 2s linear
-
-.img
-  float: left
-  position: relative
-
-img
-  width: 300px
-  height: auto
-
-.info
-  position: relative
-  text-align: center
-  top: 38%
-
-.name
-  font-size: 18px
-  text-align: center
-
-.inOut
-  font-size: 16px
-  text-align: center
+  transition: 0.6s
+  .img
+    z-index: 5
+    float: left
+    transition: 0.6s
+    &:hover    
+      transform: translateX(100%)
+  img
+    width: 300px
+  .info
+    position: relative
+    top: 38%
+  .name
+    font-size: 18px
+  .inOut
+    font-size: 16px

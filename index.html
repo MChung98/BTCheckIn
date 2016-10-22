@@ -18,29 +18,32 @@
             <li></li>
             <li></li>
             <li></li>
-            <li></li>
+            <li><a href="http://github.com/KevinAiken/BTCheckIn">Github</a></li>
         </ul>
     </sidebar>
     
     <div id="card-container">
-    <script id="card-template" type="text/x-handlebars-template">
-        <div class="card">
-            <div class="img">
-                <img src={{img}}>
-            </div>
-            <div class="info">
-                <div class="name">
-                    <h2>{{name}}</h2>
+        <div id="center-cards">
+            <script id="card-template" type="text/x-handlebars-template">
+                <div class="card">
+                    <div class="img">
+                        <img src={{img}}>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <h2>{{name}}</h2>
+                        </div>
+                        <div class="isIn">
+                            <p>{{isIn}}</p>
+                        </div>
+                        <div class="lastIn">
+                            <p>{{lastIn}}</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="inOut">
-                    <p>{{inOut}}</p>
-                </div>
-            </div>
+            </script>
         </div>
-    </script>
-        <a href="http://github.com/KevinAiken/BTCheckIn">Github</a>
     </div>
-
 </body>
     
     
