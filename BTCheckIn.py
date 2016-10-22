@@ -1,16 +1,32 @@
 import bluetooth
 import time
+import os.path
 
 print "In/Out Board"
 
+home = False
+
 while True:
-  print "Checking " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime())
+    if((os.path.isfile(users.txt)) == False):
+        file = open('users.txt', rw)
+    while True:
+        try:
+            currentID = file.readline()
+            print "Checking " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime())
+            result = bluetooth.lookup_name(currentID, timeout=5)
+            if (result != None):
+                print "Kevin: in"
+                if(home == False):
+                    home = True
+                    # send notification to server
+                else:
+                    print "Kevin: out"
+                if(home):
+                    home = False
+                    # send notification to server
 
-  result = bluetooth.lookup_name('74:A5:28:EC:31:3C', timeout=5)
-  if (result != None):
-    print "Kevin: in"
-  else:
-    print "Kevin: out"
+        except:
+            print("Errrroooooooeeer")
+            break
 
-  time.sleep(10)
-  
+time.sleep(10) # change to every few minutes for final
